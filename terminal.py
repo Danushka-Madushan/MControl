@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, send_from_directory
-from extenstinos import Admin, execute, validate
+from extenstinos import Admin, Execute, Validate
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "./media"
@@ -7,13 +7,13 @@ app.config['UPLOAD_FOLDER'] = "./media"
 @app.route('/execute', methods=['POST'])
 def main():
 	data = request.json
-	response = jsonify({"status":"success", "info":execute(data['command']).get_data()})
+	response = jsonify({"status":"success", "info":Execute(data['command']).get_data()})
 	return response, 200
 
 @app.route("/media/<path:name>/<token>", methods=['GET'])
 def download_file(name, token):
 	name = "%s.png" % name
-	if validate(token).check():
+	if Validate(token).check():
 		return send_from_directory(app.config['UPLOAD_FOLDER'], name)
 	else:
 		return {"status":"failed", "reason":"Invalid token"}

@@ -8,7 +8,7 @@ funcrtn = {
 	"ss": ["Screenshot/png", "media_id"]
 }
 
-class execute():
+class Execute():
 	def __init__(self, arg):
 		self.arg = arg
 		self.data = getattr(functions, func[arg])()

@@ -1,4 +1,4 @@
-class validate():
+class Validate():
 	def __init__(self, uuid):
 		self.uuid = uuid
 		self.id = "123456789"
