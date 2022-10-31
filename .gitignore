@@ -1,1 +1,4 @@
 *.sublime-workspace
+*.pyc
+/__pycache__
+*.png
