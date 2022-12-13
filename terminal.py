@@ -1,11 +1,15 @@
-from flask import Flask, jsonify, request, send_from_directory
+from flask import Flask, jsonify, request, send_from_directory, render_template
 from extenstinos import Admin, Execute, Validate
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "./media"
 
-@app.route('/execute', methods=['POST'])
+@app.route('/', methods=["GET"])
 def main():
+	return render_template("index.html")
+
+@app.route('/execute', methods=['POST'])
+def execute():
 	data = request.json
 	response = jsonify({"status":"success", "info":Execute(data['command']).get_data()})
 	return response, 200
