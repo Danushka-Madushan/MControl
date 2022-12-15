@@ -12,4 +12,12 @@ def screenshot():
 def clean_ss():
 	for each in os.listdir("media"):
 		os.remove("media/%s" % each)
-	return [None, "success"]
+	return ["OK", "success"]
+
+def shutdown():
+	os.system('shutdown /s /t 30')
+	return [30, "success"]
+
+def abortshut():
+	os.system('shutdown -a')
+	return ["OK", "shutdown-aborted"]

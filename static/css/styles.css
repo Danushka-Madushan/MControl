@@ -15,8 +15,8 @@ a {
     text-decoration: none;
 }
 
-#caps, #clr {
-    margin: 20px 16;
+#caps, #clr, #sdp, #asdp {
+    display: block;
     padding: 10px 8px;
     font-size: 13px;
     background-color: #00acee;
@@ -29,6 +29,10 @@ a {
 
 .container {
     padding: 20px;
+}
+
+button {
+    margin: 10px 5px;
 }
 
 button:hover {

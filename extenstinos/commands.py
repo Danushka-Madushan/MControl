@@ -2,12 +2,16 @@ from extenstinos import functions
 
 func = {
 	"ss": "screenshot",
-	"ss-clear": "clean_ss"
+	"ss-clear": "clean_ss",
+	"os-shut": "shutdown",
+	"abort-shut": "abortshut"
 }
 
 funcrtn = {
 	"ss": ["Screenshot/png", "media_id", "stamp"],
-	"ss-clear": ["None", "None", "status"]
+	"ss-clear": ["None", "None", "status"],
+	"os-shut": ["None", "time", "shutdown"],
+	"abort-shut" : ["None", "None", "status"]
 }
 
 class Execute():
