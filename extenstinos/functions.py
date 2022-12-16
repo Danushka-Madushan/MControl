@@ -6,6 +6,8 @@ def screenshot():
 	with mss() as sct:sct.shot()
 	t = time()
 	imgid = str(t).replace(".", "-")
+	if not os.path.isdir('media'):
+		os.system('mkdir media')
 	shutil.move("monitor-1.png", "media/{}.png".format(imgid))
 	return [imgid, ctime(t)]
 
