@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, request, send_from_directory, render_template
-from extenstinos import Admin, Execute, Validate
+from extenstinos import Admin, Execute, Validate, DeviceID
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = "./media"
