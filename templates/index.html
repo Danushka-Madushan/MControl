@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.2/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
     <link rel="stylesheet" href="static/css/styles.css">
     <title>Term</title>
 </head>
 <body>
     <div class="container">
-        <button id="caps">Caputure Screenshot</button>
-        <button id="clr">Clear</button>
-        <button id="sdp">Shutdown PC</button>
-        <button id="asdp">Abort Shutdown</button>
+        <div class="iconbtn">
+            <button class="faicon">
+                <i class="fa-solid fa-camera"></i>
+            </button>
+            <button id="caps">Caputure Screenshot</button>
+        </div>
+        <div class="iconbtn">
+            <button class="faicon hidable-1">
+                <i class="fa-solid fa-trash"></i>
+            </button>
+            <button id="clr" class="hidable-1">Clear</button>
+        </div>
+        <div class="iconbtn">
+            <button class="faicon">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+            <button id="sdp">Shutdown PC</button>
+        </div>
+        <div class="iconbtn">
+            <button class="faicon hidable-2">
+                <i class="fa-solid fa-stop"></i>
+            </button>
+            <button id="asdp" class="hidable-2">Abort Shutdown</button>
+        </div>
         <div class="list"></div>
     </div>
     <script type="text/javascript" src="static/js/index.js"></script>
