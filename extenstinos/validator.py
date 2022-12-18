@@ -18,6 +18,6 @@ class DeviceID():
     def data(self):
         resp = get(self.api+self.UserAgent, headers={'user-agent':self.UserAgent})
         if resp.status_code == 200:
-            return resp.json()
+            return {"status_code":resp.status_code, "response":resp.json()}
         else:
             return {"status_code":resp.status_code,"reason":"API DEPRECATED"}

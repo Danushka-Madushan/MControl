@@ -22,6 +22,12 @@ def download_file(name, token):
 	else:
 		return {"status":"failed", "reason":"Invalid token"}
 
+@app.route("/device", methods=["POST"])
+def device_info():
+	data = request.json
+	response = jsonify(DeviceID(data['userAgent']).data())
+	return response, 200
+	
 # Login System
 # Make a Web interface that can control users pc with buttons and commands
 # Ex: there is a button called Shutdown When you pushed that button yout pc will shut down
