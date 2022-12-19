@@ -20,4 +20,4 @@ class DeviceID():
         if resp.status_code == 200:
             return {"status_code":resp.status_code, "response":resp.json()}
         else:
-            return {"status_code":resp.status_code,"reason":"API DEPRECATED"}
+            return {"status_code":resp.status_code, "reason":"API DEPRECATED"}
